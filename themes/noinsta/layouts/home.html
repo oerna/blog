@@ -2,7 +2,9 @@
 
 <section class="profile-header">
   <div class="profile-top">
-    <div class="profile-avatar">BG</div>
+    <div class="profile-avatar">
+      <img src="{{ "images/profile-avatar.jpg" | relURL }}" alt="Björn Gottschall" />
+    </div>
     <div class="profile-stats">
       <div class="profile-username"><a href="https://www.instagram.com/bjoern.gottschall/" target="_blank" rel="noopener noreferrer">bjoern.gottschall</a></div>
       <div class="profile-meta">
@@ -29,7 +31,7 @@
     {{ if not .Draft }}
       <a class="item" href="{{ .RelPermalink }}" title="{{ .Title }}">
         {{ with .Params.images }}
-          <img src="{{ index . 0 }}" alt="{{ $.Title }}" loading="lazy">
+          <img src="{{ (index . 0) | relURL }}" alt="{{ $.Title }}" loading="lazy">
         {{ else }}
           {{ with .Params.videos }}
             <video src="{{ index . 0 }}" muted playsinline></video>

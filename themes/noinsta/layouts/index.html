@@ -4,7 +4,7 @@
   {{ range .Site.RegularPages }}
     <a class="item" href="{{ .RelPermalink }}" title="{{ .Title }}">
       {{ with .Params.images }}
-        <img src="{{ index . 0 }}" alt="{{ $.Title }}" loading="lazy">
+        <img src="{{ (index . 0) | relURL }}" alt="{{ $.Title }}" loading="lazy">
       {{ else }}
         {{ with .Params.videos }}
           <video src="{{ index . 0 }}" muted playsinline></video>

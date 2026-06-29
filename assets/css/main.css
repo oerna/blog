@@ -68,14 +68,16 @@ a:focus {
 
 .profile-top {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.9rem;
   margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .profile-avatar {
-  width: 56px;
-  height: 56px;
+  width: 76px;
+  height: 76px;
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
@@ -100,6 +102,19 @@ a:focus {
   gap: 0.75rem;
   font-size: 0.92rem;
   color: #d8d8d8;
+}
+
+.profile-meta > * {
+  position: relative;
+  padding-right: 0.75rem;
+}
+
+.profile-meta > *:not(:last-child)::after {
+  content: "·";
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #6e6e6e;
 }
 
 .profile-bio h2 {
