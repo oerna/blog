@@ -1,5 +1,29 @@
 {{ define "main" }}
 
+<section class="profile-header">
+  <div class="profile-top">
+    <div class="profile-avatar">BG</div>
+    <div class="profile-stats">
+      <div class="profile-username"><a href="https://www.instagram.com/bjoern.gottschall/" target="_blank" rel="noopener noreferrer">bjoern.gottschall</a></div>
+      <div class="profile-meta">
+        <span>343 Beiträge</span>
+        <a href="https://www.instagram.com/bjoern.gottschall/" target="_blank" rel="noopener noreferrer">11.100 Follower</a>
+        <a href="https://www.instagram.com/bjoern.gottschall/" target="_blank" rel="noopener noreferrer">1.295 Gefolgt</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="profile-bio">
+    <h2>Björn Gottschall</h2>
+    <p>Musician/band</p>
+    <p>Pianist / Composer</p>
+    <p>Artist at <a href="https://www.instagram.com/weareplatoon/" target="_blank" rel="noopener noreferrer">@weareplatoon</a></p>
+    <p>Booking: <a href="https://www.instagram.com/f.e.u.l/" target="_blank" rel="noopener noreferrer">@f.e.u.l</a></p>
+    <p>Piano - bicycle - trailer</p>
+    <a href="https://www.bjoerngottschall.com" target="_blank" rel="noopener noreferrer">www.bjoerngottschall.com</a>
+  </div>
+</section>
+
 <div class="masonry">
   {{ range where .Site.Pages "Type" "posts" }}
     {{ if not .Draft }}
