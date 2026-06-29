@@ -1,0 +1,49 @@
+/* <stdin> */
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  font-family: sans-serif;
+}
+.masonry {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding: 10px;
+}
+@media (max-width: 500px) {
+  .masonry {
+    grid-template-columns: 1fr;
+  }
+}
+.item {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+  break-inside: avoid;
+  position: relative;
+}
+.item img,
+.item video {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+.item:hover img,
+.item:hover video {
+  transform: scale(1.02);
+}
+.item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 60%,
+      rgba(0, 0, 0, 0.3));
+  border-radius: 10px;
+  pointer-events: none;
+}
+/*# sourceMappingURL=main.css.map */

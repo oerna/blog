@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="500" viewBox="0 0 400 500">
+  <rect width="400" height="500" fill="#0f0f10"/>
+  <rect x="20" y="20" width="360" height="460" rx="24" fill="#17181c" stroke="#ffffff" stroke-opacity="0.16"/>
+  <circle cx="200" cy="210" r="72" fill="#ff5f7d"/>
+  <rect x="96" y="320" width="208" height="16" rx="8" fill="#ffffff" opacity="0.82"/>
+  <rect x="116" y="348" width="168" height="12" rx="6" fill="#ffffff" opacity="0.54"/>
+  <text x="200" y="272" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="28">Post 1</text>
+</svg>
