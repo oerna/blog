@@ -20,20 +20,25 @@ body {
   background-color: #000000;
 }
 
+.site-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 2rem;
+  background-color: #000000;
+}
+
 header,
-main,
 footer {
   background-color: #000000;
   color: #ffffff;
 }
 
-header,
 footer {
   padding: 1rem 1.25rem;
 }
 
 main {
-  padding: 1rem 1.25rem 2rem;
+  padding: 0;
 }
 
 header h1 {
