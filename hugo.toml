@@ -1,5 +1,4 @@
 baseURL = 'https://oerna.github.io/blog/'
-relativeURLs = true
 locale = 'fr-fr'
 title = 'Bjorn Gottschall - Blog'
 theme = 'noinsta'
