@@ -48,12 +48,13 @@
           {{ with $page.Params.videos }}
             {{ $vid := $page.Resources.GetMatch (index . 0) }}
             {{ if $vid }}
-              <video src="{{ $vid.RelPermalink }}" muted playsinline></video>
+              <video src="{{ $vid.RelPermalink }}" muted playsinline autoplay loop preload="metadata"></video>
             {{ else }}
-              <video src="{{ index . 0 }}" muted playsinline></video>
+              <video src="{{ index . 0 }}" muted playsinline autoplay loop preload="metadata"></video>
             {{ end }}
           {{ end }}
         {{ end }}
+        <span class="item-label">{{ $page.Title }}</span>
       </a>
     {{ end }}
   {{ end }}
