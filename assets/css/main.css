@@ -23,7 +23,7 @@ body {
 }
 
 .site-container {
-  max-width: 640px;
+  max-width: 840px;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -108,16 +108,24 @@ a:focus {
 .masonry {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
+  gap: 1px;
   padding: 0;
 }
 
 .item {
   display: block;
   position: relative;
-  border-radius: 12px;
+  border-radius: 0;
   overflow: hidden;
   background: #111;
+}
+
+.masonry .item:first-child {
+  border-top-left-radius: 12px;
+}
+
+.masonry .item:nth-child(3) {
+  border-top-right-radius: 12px;
 }
 
 .item img,
