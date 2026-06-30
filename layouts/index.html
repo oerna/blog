@@ -33,7 +33,7 @@
 </section>
 
 <div class="masonry">
-  {{ range where .Site.RegularPages "Type" "posts" }}
+  {{ range sort (where (where .Site.Pages "Kind" "page") "Type" "posts") "Date" "desc" }}
     {{ if not .Draft }}
       {{ $page := . }}
       <a class="item" href="{{ $page.RelPermalink }}" title="{{ $page.Title }}">
