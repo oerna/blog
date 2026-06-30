@@ -1,0 +1,41 @@
+{{ define "main" }}
+<article class="post-detail">
+  <a class="back-link" href="{{ "/" | relURL }}">← Back</a>
+
+  {{ $page := . }}
+  {{ with $page.Params.images }}
+    {{ $img := $page.Resources.GetMatch (index . 0) }}
+    <figure class="post-image">
+      {{ if $img }}
+        <img src="{{ $img.RelPermalink }}" alt="{{ $page.Title }}">
+      {{ else }}
+        <img src="{{ index . 0 | relURL }}" alt="{{ $page.Title }}">
+      {{ end }}
+    </figure>
+  {{ else }}
+    {{ with $page.Params.videos }}
+      {{ $vid := $page.Resources.GetMatch (index . 0) }}
+      <figure class="post-video">
+        {{ if $vid }}
+          <video src="{{ $vid.RelPermalink }}" controls></video>
+        {{ else }}
+          <video src="{{ index . 0 }}" controls></video>
+        {{ end }}
+      </figure>
+    {{ end }}
+  {{ end }}
+
+  <div class="post-content">
+    <h1>{{ $page.Title }}</h1>
+    <time class="post-date" datetime="{{ $page.Date.Format "2006-01-02T15:04:05-07:00" }}">
+      {{ $page.Date.Format ":date_long" }}
+    </time>
+
+    <div class="post-body">
+      {{ $page.Content }}
+    </div>
+
+    {{ partial "terms.html" (dict "taxonomy" "tags" "page" $page) }}
+  </div>
+</article>
+{{ end }}

@@ -1,4 +1,4 @@
-baseURL = 'https://oerna.github.io/blog/'
-locale = 'fr-fr'
-title = 'Bjorn Gottschall - Blog'
-theme = 'noinsta'
+baseURL = "https://oerna.github.io/blog/"
+title = "Bjorn Gottschall - Blog"
+locale = "fr-fr"
+languageCode = "fr-fr"

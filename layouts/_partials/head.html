@@ -1,0 +1,10 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+
+{{ with resources.Get "css/main.css" }}
+  {{ $css := . | css.Build (dict "minify" (not hugo.IsDevelopment) "sourceMap" (cond hugo.IsDevelopment "linked" "none")) }}
+  {{ with $css | fingerprint }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+  {{ end }}
+{{ end }}
