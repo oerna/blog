@@ -1,0 +1,15 @@
+{{ define "main" }}
+<section class="archive-header">
+  <a class="back-link" href="{{ "/" | relURL }}">← Home</a>
+  <h1>{{ .Title }}</h1>
+</section>
+
+<div class="archive-grid">
+  {{ range .Pages.ByDate.Reverse }}
+    <a class="archive-item" href="{{ .RelPermalink }}">
+      <span class="archive-title">{{ .Title }}</span>
+      <time class="archive-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format ":date_long" }}</time>
+    </a>
+  {{ end }}
+</div>
+{{ end }}

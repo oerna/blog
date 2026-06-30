@@ -1,0 +1,12 @@
+{{ define "main" }}
+<section class="archive-header">
+  <a class="back-link" href="{{ "/" | relURL }}">← Home</a>
+  <h1>{{ .Title }}</h1>
+</section>
+
+<div class="tag-grid">
+  {{ range .Data.Terms.Alphabetical }}
+    <a class="tag-chip" href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <span>{{ .Count }}</span></a>
+  {{ end }}
+</div>
+{{ end }}
